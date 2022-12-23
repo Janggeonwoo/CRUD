@@ -27,11 +27,12 @@ class App extends Component {
     axios.post('/tiger/temp/?value=read',{})
     .then( (res)=>{
       let result = [];
-      console.log(res.data);
+      console.log(1,res.data);
       for (let i = 0; i < res.data.length; i++) {
         let once = res.data[i];
         result.push(
           <tr key={i+1} >
+            <td>{i+1}</td>
             <td>{once.id}</td>
             <td>{once.pw}</td>
           </tr>
