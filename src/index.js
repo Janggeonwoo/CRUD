@@ -1,12 +1,16 @@
 
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-
-
-// 4번
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+// npm install --save react-router-dom
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App/>
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
 );
+reportWebVitals();
