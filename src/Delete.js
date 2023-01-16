@@ -6,7 +6,7 @@ const Delete = () => {
     const location = useLocation();
 
     useEffect(() => {
-        axios.post('/delete',{
+        axios.post('/api/delete',{
             mid:location.state.mid
         })
         .then( (res)=>{

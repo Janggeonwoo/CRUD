@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -17,7 +17,7 @@ const Update = () => {
           }, [ location ])
           
        let update = ()=>{
-      axios.post('/update',{
+      axios.post('/api/update',{
         mid: mid,
         pw: pw,
       })

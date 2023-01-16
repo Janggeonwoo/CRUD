@@ -12,7 +12,7 @@ const Create = () => {
       setFade(!fade);
   }
     const create = ()=>{ 
-      axios.post('/create',{
+      axios.post('/api/create',{
         id:id,
         pw:pw,
       })
@@ -26,10 +26,7 @@ const Create = () => {
         <form id = "test1" onSubmit={ ()=>{create()}}>
            <Input type="text" style={{width:200}} bsSize="sm" placeholder="아이디 입력" onChange={ (e)=>{setId(e.target.value)} } /><br/>
            <Input type="text" style={{width:200}} placeholder="비밀번호 입력" onChange={ (e)=>{setPw(e.target.value)} }/>
-           <input type="submit" style={{
-              color: "black", 
-              backgroundColor: "green"
-            }} value="등록"/><br/><br/>
+           <input className='custom-btn btn-5' type="submit" value="등록"/><br/><br/>
          </form>
 
          <Button color="success" onClick={()=>{toggle()}}>사스케</Button>

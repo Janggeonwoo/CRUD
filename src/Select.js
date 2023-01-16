@@ -11,7 +11,7 @@ const Select = () => {
     },[] );
 
        let select = ()=>{
-      axios.get('/select',{
+      axios.get('/api/select',{
         
       })
       .then( (res)=>{
